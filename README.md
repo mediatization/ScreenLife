@@ -1,5 +1,37 @@
 # ScreenLife
-The ScreenLife system uses the following components for collecting and analysing experience sampling data. 
 
-- [DMPO](https://github.com/mediatization/ScreenLife/blob/main/DMPO/README.md)
-- [cloud-functions](https://github.com/mediatization/ScreenLife/blob/main/cloud-functions-main/readme.md)
+### Prerequisites
+Sign in to your [Azure Storage account](https://portal.azure.com/) (i.e. screenlifepipelinetest1)
+
+Install the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+Python 3.8+
+## Setting up
+This section walks you through preparing a project to work with the Azure Blob Storage client library for Python.
+
+Clone the github repo:
+
+    git clone https://github.com/mediatization/ScreenLife
+
+Swtch to the Azure directory:
+
+    cd C:\github\ScreenLife\azure
+
+Open the Python application file named [quickstart_blob.py](C:\github\ScreenLife\azure\blob_quickstart.py)
+
+## Install the packages
+
+From the 'Azure' directory, install packages for the Azure Blob Storage and Azure Identity client libraries using the pip install command. The azure-identity package is needed for passwordless connections to Azure services.
+
+    pip install azure-storage-blob azure-identity
+
+Sign-in to Azure through the Azure CLI using the following command:
+
+
+    az login
+ 
+Navigate to the directory containing the blob_quickstart.py file, then execute the following python command to run the app:
+
+    python blob_quickstart.py
+
+ The blob_quickstart.py file creates a test file in your local folder and uploads it to Azure Blob Storage. The example then lists the blobs in the container, and downloads the file with a new name. You can compare the old and new files.
