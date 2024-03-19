@@ -21,7 +21,7 @@ Swtch to the Azure directory:
     Set-Location -Path C:\github\ScreenLife\azure
 
 
-Open the Python application file named [quickstart_blob.py](C:\github\ScreenLife\azure\blob_quickstart.py)
+Open the Python application file named [quickstart_blob.py](https://github.com/mediatization/ScreenLife/blob_quickstart.py)
 
 ## Install the packages
 
