@@ -1,7 +1,7 @@
 import os, uuid
 from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
-# from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename
 try:
     print("Azure Blob Storage Python quickstart sample")
 
