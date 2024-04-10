@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain, dialog, ipcRenderer, shell } = require("electron");
 const fs = require("fs")
-const { Storage } = require("@azure/storage-blob");
+const { Storage } = require("@google-cloud/storage");
 const { timePassedFromDate } = require("./util");
 const checkInternetConnected = require('check-internet-connected');
 const bcrypt = require('bcryptjs');
@@ -17,8 +17,8 @@ if (fs.existsSync("default-settings.json")) {
 }
 console.log(settings);
 
-const PROJECTID =  settings.azureProjectId
-const BUCKETID = settings.azureBucketId
+const PROJECTID =  settings.projectId
+const BUCKETID = settings.bucketId
 console.log(BUCKETID);
 let PASSPHRASE = "16charpassphrase" // MUST BE 16 CHARACTERS
 
